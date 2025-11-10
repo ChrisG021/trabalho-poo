@@ -4,6 +4,7 @@ import javax.persistence.*;
 import java.io.Serializable;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Date;
 import java.util.Objects;
 
@@ -31,7 +32,7 @@ public class Aluno implements Serializable {
     
     @Column(name = "nome", nullable = false, length = 200)
     private String nome;
-    
+
     @Column(name = "idade", nullable = false)
     private int idade;
     
@@ -86,7 +87,19 @@ public class Aluno implements Serializable {
     }
     
     public int getIdade() {
-        return idade;
+        if (dataNascimento == null) {
+            return 0;
+        }
+        Calendar calAtual = Calendar.getInstance();
+        Calendar calNasc = Calendar.getInstance();
+        calNasc.setTime(dataNascimento);
+        int idade = calAtual.get(Calendar.YEAR) - (calNasc.get(Calendar.YEAR));
+
+        if (calAtual.get(Calendar.DAY_OF_YEAR) < calNasc.get(Calendar.DAY_OF_YEAR)) {
+            idade--;
+        }
+
+        return Math.max(0, idade);
     }
     
     public void setIdade(int idade) {
