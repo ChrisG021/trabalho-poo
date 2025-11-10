@@ -43,7 +43,7 @@ public class HibernateUtil {
             
             // ===== CONFIGURAÇÕES DE CONEXÃO COM O BANCO DE DADOS =====
             
-            // HSQLDB (banco de dados em memória - recomendado para testes)
+            // HSQLDB (banco de dados em memória )
             configuration.setProperty("hibernate.connection.driver_class", "org.hsqldb.jdbcDriver");
             configuration.setProperty("hibernate.connection.url", "jdbc:hsqldb:file:./data/alunosdb");
             configuration.setProperty("hibernate.connection.username", "SA");

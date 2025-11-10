@@ -176,7 +176,6 @@ public class FormularioListagem extends JFrame {
         JButton botao = new JButton(texto);
         botao.setFont(new Font("Arial", Font.BOLD, 12));
         botao.setBackground(cor);
-        botao.setForeground(Color.WHITE);
         botao.setFocusPainted(false);
         botao.setMaximumSize(new Dimension(150, 35));
         botao.setAlignmentX(Component.CENTER_ALIGNMENT);

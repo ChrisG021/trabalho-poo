@@ -217,7 +217,7 @@ public class FormularioPrincipal extends JFrame {
         JButton btnSalvar = new JButton("Salvar Aluno");
         btnSalvar.setFont(new Font("Arial", Font.BOLD, 14));
         btnSalvar.setBackground(new Color(46, 139, 87)); // SeaGreen
-        btnSalvar.setForeground(Color.WHITE);
+        btnSalvar.setForeground(Color.GREEN);
         btnSalvar.setFocusPainted(false);
         btnSalvar.setPreferredSize(new Dimension(150, 40));
         btnSalvar.addActionListener(e -> salvarAluno());
@@ -226,7 +226,7 @@ public class FormularioPrincipal extends JFrame {
         JButton btnLimpar = new JButton("Limpar");
         btnLimpar.setFont(new Font("Arial", Font.BOLD, 14));
         btnLimpar.setBackground(new Color(255, 165, 0)); // Orange
-        btnLimpar.setForeground(Color.WHITE);
+        btnLimpar.setForeground(Color.ORANGE);
         btnLimpar.setFocusPainted(false);
         btnLimpar.setPreferredSize(new Dimension(150, 40));
         btnLimpar.addActionListener(e -> limparCampos());
@@ -235,7 +235,7 @@ public class FormularioPrincipal extends JFrame {
         JButton btnListar = new JButton("Listar Alunos");
         btnListar.setFont(new Font("Arial", Font.BOLD, 14));
         btnListar.setBackground(new Color(70, 130, 180)); // SteelBlue
-        btnListar.setForeground(Color.WHITE);
+        btnListar.setForeground(Color.BLUE);
         btnListar.setFocusPainted(false);
         btnListar.setPreferredSize(new Dimension(150, 40));
         btnListar.addActionListener(e -> abrirListagemAlunos());
